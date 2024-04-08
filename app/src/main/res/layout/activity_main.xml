@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:hint="id"
+            />
+
+
+        <EditText
+            android:id="@+id/et_user"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:hint="user"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/db_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@+id/ll_all"
+
+        />
+
+    <Button
+        android:id="@+id/db_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_below="@+id/db_add"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/db_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_below="@+id/db_query"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/db_delete_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除全部"
+        android:background="@android:color/holo_green_light"
+        android:layout_below="@+id/db_delete"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/db_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改"
+        android:background="@android:color/holo_purple"
+        android:layout_below="@+id/db_delete_all"
+        android:layout_centerHorizontal="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvLanguage"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/db_update"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item" />
+
+</RelativeLayout>
