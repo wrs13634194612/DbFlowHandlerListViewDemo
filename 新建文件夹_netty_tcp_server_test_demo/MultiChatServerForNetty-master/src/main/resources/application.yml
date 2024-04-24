@@ -1,0 +1,15 @@
+spring:
+  sql:
+    init:
+      schema-locations: classpath*:db/h2/schema.sql
+      data-locations: classpath*:db/h2/data.sql
+netty:
+  server:
+    port: 60149
+    count:
+      boss: 1
+      worker: 1
+  log:
+    level:
+      pipeline: ERROR
+      bootstrap: ERROR
